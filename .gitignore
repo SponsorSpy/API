@@ -1,0 +1,12 @@
+logs
+.DS_Store
+target
+/.sbtserver
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/project/.sbtserver
+/project/.sbtserver.lock
+/.settings
+/RUNNING_PID

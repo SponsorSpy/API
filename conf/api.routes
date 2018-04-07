@@ -1,0 +1,48 @@
+# All API endpoints
+# ----------
+
+# Accounts API Endpoints (/accounts)
+GET     /accounts            controllers.api.AccountsController.viewAll
+POST    /accounts            controllers.api.AccountsController.createNew
+POST    /accounts/login      controllers.api.AccountsController.login
+POST    /accounts/logout     controllers.api.AccountsController.logout
+GET     /accounts/:accountId controllers.api.AccountsController.show
+DELETE  /accounts/:accountId controllers.api.AccountsController.delete
+PUT     /accounts/:accountId controllers.api.AccountsController.update
+
+# Tags API Endpoints (/tags)
+
+GET     /tags                controllers.api.TagsController.viewAll
+POST    /tags                controllers.api.TagsController.createNew
+GET     /tags/:tagId         controllers.api.TagsController.show
+DELETE  /tags/:tagId         controllers.api.TagsController.delete
+PUT     /tags/:tagId         controllers.api.TagsController.update
+PUT     /tags/:tagId/review  controllers.api.TagsController.reviewUgc
+GET     /tags/search         controllers.api.TagsController.search
+
+# UGC API Endpoints (/ugcs)
+
+GET     /ugcs                controllers.api.UgcsController.viewAll
+POST    /ugcs                controllers.api.UgcsController.createNew
+GET     /ugcs/:ugcId         controllers.api.UgcsController.show
+DELETE  /ugcs/:ugcId         controllers.api.UgcsController.delete
+PUT     /ugcs/:ugcId         controllers.api.UgcsController.update
+GET     /ugcs/search         controllers.api.UgcsController.search
+
+# UGC Creator Endpoints (/ugcs/creators)
+
+GET     /ugcs/creators                controllers.api.UgcCreatorsController.viewAll
+POST    /ugcs/creators                controllers.api.UgcCreatorsController.createNew
+GET     /ugcs/creators/:creatorId     controllers.api.UgcCreatorsController.show
+DELETE  /ugcs/creators/:creatorId     controllers.api.UgcCreatorsController.delete
+PUT     /ugcs/creators/:creatorId     controllers.api.UgcCreatorsController.update
+GET     /ugcs/creators/search         controllers.api.UgcCreatorsController.search
+
+# Sponsor Endpoints (/ugcs/sponsors)
+
+GET     /ugcs/sponsors                controllers.api.UgcSponsorsController.viewAll
+POST    /ugcs/sponsors                controllers.api.UgcSponsorsController.createNew
+GET     /ugcs/sponsors/:sponsorId     controllers.api.UgcSponsorsController.show
+DELETE  /ugcs/sponsors/:sponsorId     controllers.api.UgcSponsorsController.delete
+PUT     /ugcs/sponsors/:sponsorId     controllers.api.UgcSponsorsController.update
+GET     /ugcs/sponsors/search         controllers.api.UgcSponsorsController.search
